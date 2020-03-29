@@ -117,10 +117,8 @@ export const store = new Vuex.Store({
 | `actions`     | 비동기 처리 로직(api 통신)을 선언 | aysnc method |
 | `commit`      | 변이(mutations) 호출 |       method |
 | `dispatch`    | 액션(actions) 호출 (한 액션에서 다른 액션을 호출할 수 있다) |       method |
-
-<!-- | `rootGetters` | 루트 저장소의 게터 |       computed |
+| `rootGetters` | 루트 저장소의 게터 |       computed |
 | `rootState`   | 루트 저장소의 상태 데이터 |       data |
--->
 
 
 ## 1.state
@@ -129,7 +127,7 @@ export const store = new Vuex.Store({
 - vuex state data
   - 서버에서 데이터를 받아오는 중인지 나타내는 논리값 
   - 로그인한 사용자 정보 등 전체 애플리케이션에서 사용하는 데이터
-  - 상품정보처럼 애플리케이션 여러 곳에서 사용도리 가능성이 있는 데이터
+  - 상품정보처럼 애플리케이션 여러 곳에서 사용될 가능성이 있는 데이터
 
 - component data
   - 마우스 포인터가 올라간 요소를 나타내는 논리값
