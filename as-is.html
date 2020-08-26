@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button onclick="add()">추가</button>
+    <ul class="result"></ul>
+    <script>
+        var i = 0;
+
+        function add() {
+            //jQuery
+            var item = `<li data-index="${i}">${++i}</li>`;
+            // $('.result').append(item);
+
+            //javascript
+            document.querySelector('.result').innerHTML += item;
+        }
+    </script>
+
+    <div class="menu">
+        <button type="button" class="menu_btn">열기</button>
+    </div>
+    <script>
+        $('.menu_btn').on('click', function() {
+            var text = $('.menu_btn').text();
+            $('.menu_btn').text(text == "열기" ? "닫기" : "열기");
+            $('.menu').toggleClass('on');
+        });
+    </script>
+</body>
+
+</html>
